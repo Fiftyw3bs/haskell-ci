@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         stage('Install') {
-            steps { sh 'cabal update && cabal install --only-dependencies --enable-tests && cabal configure --enable-tests' }
+            steps { sh 'cabal update && cabal install --only-dependencies --enable-tests && cabal configure' }
         }
         stage('Build') {
             steps { sh 'cabal build main-is ' }
