@@ -3,7 +3,7 @@ pipeline {
         HOME = '.'
     }
     agent {
-        docker { image 'inputoutput/plutus-starter-devcontainer:latest' }
+        docker { image 'nixos/nix:latest' }
     }
     stages {
         stage('Prepare') {
